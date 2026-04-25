@@ -6,15 +6,22 @@ import { Layout } from "@/components/site/Layout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — NovaStack" },
+      { title: "About NovaStack — Senior Tech Team Building Modern Products" },
       {
         name: "description",
         content:
-          "NovaStack is a senior tech team building web, mobile, AI and cloud products for ambitious brands worldwide.",
+          "NovaStack is a senior tech studio of 18 designers and engineers shipping web, mobile, AI and cloud products for ambitious brands worldwide since 2019.",
       },
-      { property: "og:title", content: "About NovaStack" },
+      { property: "og:title", content: "About NovaStack — Senior Tech Studio" },
       {
         property: "og:description",
+        content: "Meet the team building the next generation of digital products.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About NovaStack" },
+      {
+        name: "twitter:description",
         content: "Meet the team building the next generation of digital products.",
       },
     ],

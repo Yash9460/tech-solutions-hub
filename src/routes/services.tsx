@@ -7,16 +7,48 @@ import { services } from "@/components/site/services-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — NovaStack Tech Agency" },
+      { title: "Services — Web, Mobile, AI & Cloud Engineering | NovaStack" },
       {
         name: "description",
         content:
-          "Web, mobile, AI, cloud, SaaS, design, security and analytics — every tech service your business needs, under one roof.",
+          "Web development, mobile apps, AI & automation, cloud, SaaS, UI/UX, cybersecurity and analytics — every tech service your business needs, under one roof.",
       },
       { property: "og:title", content: "Tech Services — NovaStack" },
       {
         property: "og:description",
         content: "Eight focused tech services built around modern stacks and senior engineering.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NovaStack Services" },
+      {
+        name: "twitter:description",
+        content: "Eight focused tech services built around modern stacks and senior engineering.",
+      },
+      { name: "keywords", content: "web development, react, mobile apps, AI agents, cloud devops, saas development, ui ux design, cybersecurity, data analytics" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "NovaStack Services",
+          itemListElement: [
+            "Web Development",
+            "Mobile Apps",
+            "AI & Automation",
+            "Cloud & DevOps",
+            "UI / UX Design",
+            "SaaS Platforms",
+            "Cybersecurity",
+            "Data & Analytics",
+          ].map((name, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            name,
+          })),
+        }),
       },
     ],
   }),
