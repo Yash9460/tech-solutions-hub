@@ -95,18 +95,9 @@ function ContactPage() {
                     />
                   </div>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Company</label>
-                    <Input placeholder="Acme Inc." className="h-11 bg-secondary/40" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Budget</label>
-                    <Input
-                      placeholder="$10k – $50k"
-                      className="h-11 bg-secondary/40"
-                    />
-                  </div>
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Company</label>
+                  <Input placeholder="Acme Inc." className="h-11 bg-secondary/40" />
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-2 block">Tell us about your project</label>
