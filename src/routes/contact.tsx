@@ -9,7 +9,7 @@ import { Layout } from "@/components/site/Layout";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — NovaStack" },
+      { title: "Contact NovaStack — Start Your Project in 24 Hours" },
       {
         name: "description",
         content:
@@ -18,6 +18,13 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact NovaStack" },
       {
         property: "og:description",
+        content: "Get in touch with our tech team. We respond within 24 hours.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact NovaStack" },
+      {
+        name: "twitter:description",
         content: "Get in touch with our tech team. We respond within 24 hours.",
       },
     ],

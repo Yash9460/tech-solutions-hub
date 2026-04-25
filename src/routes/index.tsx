@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Zap, Rocket, Star, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
+import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/components/site/services-data";
 import heroImage from "@/assets/hero-tech.jpg";
 
@@ -12,13 +13,41 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "NovaStack is a modern tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
+          "NovaStack is a senior tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
       },
       { property: "og:title", content: "NovaStack — Tech Services that Scale" },
       {
         property: "og:description",
         content:
-          "Web, Mobile, AI, Cloud, and SaaS engineering for ambitious brands. Premium design + production-grade code.",
+          "Web, mobile, AI, cloud and SaaS engineering for ambitious brands. Premium design + production-grade code.",
+      },
+      { property: "og:image", content: heroImage },
+      { name: "twitter:title", content: "NovaStack — Tech Services that Scale" },
+      {
+        name: "twitter:description",
+        content: "Web, mobile, AI, cloud and SaaS engineering for ambitious brands.",
+      },
+      { name: "twitter:image", content: heroImage },
+      { name: "keywords", content: "tech agency, web development, mobile apps, AI development, cloud, SaaS, UI UX design, devops" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "NovaStack",
+          image: "https://novastack.dev/og.jpg",
+          description:
+            "Tech services agency delivering web, mobile, AI and cloud products end-to-end.",
+          priceRange: "$$$",
+          areaServed: "Worldwide",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "45",
+          },
+        }),
       },
     ],
   }),
@@ -134,20 +163,19 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="group relative rounded-2xl glass-card p-6 hover:border-primary/40 hover:-translate-y-1 transition-smooth"
-              >
-                <div className="absolute -inset-px rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-20 blur transition-smooth pointer-events-none" />
-                <div className="relative">
-                  <div className="h-12 w-12 rounded-xl bg-gradient-primary grid place-items-center mb-5 group-hover:scale-110 transition-smooth">
-                    <s.icon className="h-6 w-6 text-primary-foreground" />
+            {services.map((s, i) => (
+              <Reveal key={s.title} delay={(i % 4) * 80}>
+                <div className="group relative rounded-2xl glass-card p-6 hover:border-primary/40 hover:-translate-y-1 transition-smooth h-full">
+                  <div className="absolute -inset-px rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-20 blur transition-smooth pointer-events-none" />
+                  <div className="relative">
+                    <div className="h-12 w-12 rounded-xl bg-gradient-primary grid place-items-center mb-5 group-hover:scale-110 transition-smooth">
+                      <s.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-lg font-semibold">{s.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                   </div>
-                  <h3 className="text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 
@@ -227,14 +255,16 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {process.map((p) => (
-              <div key={p.n} className="relative rounded-2xl glass-card p-6">
-                <div className="text-5xl font-bold font-display text-gradient opacity-80">
-                  {p.n}
+            {process.map((p, i) => (
+              <Reveal key={p.n} delay={i * 100}>
+                <div className="relative rounded-2xl glass-card p-6 h-full hover:-translate-y-1 transition-smooth">
+                  <div className="text-5xl font-bold font-display text-gradient opacity-80">
+                    {p.n}
+                  </div>
+                  <h3 className="mt-3 text-xl font-semibold">{p.t}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.d}</p>
                 </div>
-                <h3 className="mt-3 text-xl font-semibold">{p.t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.d}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -250,20 +280,29 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div key={t.name} className="rounded-2xl glass-card p-7 hover:-translate-y-1 transition-smooth">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={i * 100}>
+                <div className="rounded-2xl glass-card p-7 h-full hover:-translate-y-1 transition-smooth">
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, idx) => (
+                      <Star key={idx} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-foreground/90 leading-relaxed">"{t.text}"</p>
+                  <div className="mt-6 pt-6 border-t border-border/60">
+                    <div className="font-semibold">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                  </div>
                 </div>
-                <p className="text-foreground/90 leading-relaxed">"{t.text}"</p>
-                <div className="mt-6 pt-6 border-t border-border/60">
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </div>
+              </Reveal>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button asChild variant="glass" size="lg">
+              <Link to="/testimonials">
+                Read all testimonials <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

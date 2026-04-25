@@ -29,19 +29,54 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "NovaStack — Premium Tech Services Agency" },
+      {
+        name: "description",
+        content:
+          "NovaStack is a senior tech agency building web, mobile, AI and cloud products that ship faster and scale smarter.",
+      },
+      { name: "author", content: "NovaStack" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "theme-color", content: "#0b1020" },
+      { property: "og:site_name", content: "NovaStack" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@novastack" },
+      { name: "twitter:creator", content: "@novastack" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "NovaStack",
+          url: "https://novastack.dev",
+          description:
+            "Senior tech agency building web, mobile, AI and cloud products for ambitious brands.",
+          sameAs: [
+            "https://twitter.com/novastack",
+            "https://www.linkedin.com/company/novastack",
+            "https://github.com/novastack",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "hello@novastack.dev",
+            contactType: "sales",
+            areaServed: "Worldwide",
+          },
+        }),
       },
     ],
   }),
