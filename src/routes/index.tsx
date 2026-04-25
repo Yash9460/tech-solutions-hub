@@ -140,8 +140,12 @@ function HomePage() {
               alt="Holographic globe with floating UI panels representing modern tech stack"
               width={1280}
               height={1280}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="relative rounded-2xl glass-card animate-float"
             />
+
           </div>
         </div>
       </section>
