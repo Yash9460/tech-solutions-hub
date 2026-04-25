@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Zap, Rocket, Star, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
+import { Reveal } from "@/components/site/Reveal";
 import { services } from "@/components/site/services-data";
 import heroImage from "@/assets/hero-tech.jpg";
 
@@ -12,13 +13,41 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "NovaStack is a modern tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
+          "NovaStack is a senior tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
       },
       { property: "og:title", content: "NovaStack — Tech Services that Scale" },
       {
         property: "og:description",
         content:
-          "Web, Mobile, AI, Cloud, and SaaS engineering for ambitious brands. Premium design + production-grade code.",
+          "Web, mobile, AI, cloud and SaaS engineering for ambitious brands. Premium design + production-grade code.",
+      },
+      { property: "og:image", content: heroImage },
+      { name: "twitter:title", content: "NovaStack — Tech Services that Scale" },
+      {
+        name: "twitter:description",
+        content: "Web, mobile, AI, cloud and SaaS engineering for ambitious brands.",
+      },
+      { name: "twitter:image", content: heroImage },
+      { name: "keywords", content: "tech agency, web development, mobile apps, AI development, cloud, SaaS, UI UX design, devops" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "NovaStack",
+          image: "https://novastack.dev/og.jpg",
+          description:
+            "Tech services agency delivering web, mobile, AI and cloud products end-to-end.",
+          priceRange: "$$$",
+          areaServed: "Worldwide",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "45",
+          },
+        }),
       },
     ],
   }),
