@@ -7,7 +7,6 @@ import {
   Palette,
   Database,
   LineChart,
-  Globe,
   Wrench,
 } from "lucide-react";
 
