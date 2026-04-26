@@ -135,9 +135,6 @@ function ServicesPage() {
                     Start a maintenance plan <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="glass" size="lg">
-                  <Link to="/contact">Get a free site audit</Link>
-                </Button>
               </div>
             </div>
 
@@ -160,38 +157,6 @@ function ServicesPage() {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="mt-14 grid sm:grid-cols-3 gap-4">
-            {[
-              { name: "Essential", price: "$299", tagline: "For small sites", points: ["Monthly updates", "Uptime monitoring", "Email support"] },
-              { name: "Growth", price: "$699", tagline: "For active products", points: ["Weekly updates", "Performance tuning", "4h response SLA"] },
-              { name: "Scale", price: "Custom", tagline: "For mission-critical apps", points: ["Dedicated engineer", "1h response SLA", "On-call rotation"] },
-            ].map((p, i) => (
-              <div
-                key={p.name}
-                className={`rounded-2xl glass-card p-6 transition-smooth hover:-translate-y-1 ${i === 1 ? "border-primary/50 ring-1 ring-primary/30" : ""}`}
-              >
-                <div className="flex items-baseline justify-between">
-                  <h3 className="text-lg font-semibold">{p.name}</h3>
-                  {i === 1 && (
-                    <span className="text-[10px] uppercase tracking-wider text-primary font-semibold">Popular</span>
-                  )}
-                </div>
-                <p className="text-sm text-muted-foreground">{p.tagline}</p>
-                <p className="mt-4 text-3xl font-bold font-display">
-                  {p.price}
-                  {p.price.startsWith("$") && <span className="text-sm text-muted-foreground font-normal">/mo</span>}
-                </p>
-                <ul className="mt-5 space-y-2 text-sm">
-                  {p.points.map((pt) => (
-                    <li key={pt} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" /> {pt}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
         </div>
       </section>
