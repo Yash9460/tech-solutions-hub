@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import boolbitLogo from "@/assets/boolbit-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,11 +35,17 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary glow">
-            <Sparkles className="h-5 w-5 text-primary-foreground" />
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden glow ring-1 ring-border/60 bg-[#0b1430]">
+            <img
+              src={boolbitLogo}
+              alt="Boolbit logo"
+              className="h-full w-full object-cover scale-[1.6]"
+              loading="eager"
+              decoding="async"
+            />
           </span>
           <span className="font-display text-lg font-bold tracking-tight">
-            Nova<span className="text-gradient">Stack</span>
+            Bool<span className="text-gradient">bit</span>
           </span>
         </Link>
 

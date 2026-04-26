@@ -8,24 +8,24 @@ import { testimonials } from "@/components/site/testimonials-data";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Testimonials — What Founders Say About NovaStack" },
+      { title: "Testimonials — What Founders Say About Boolbit" },
       {
         name: "description",
         content:
-          "Real stories from founders, CTOs and product leaders who shipped with NovaStack. 4.9/5 average rating across 45+ engagements.",
+          "Real stories from founders, CTOs and product leaders who shipped with Boolbit. 4.9/5 average rating across 45+ engagements.",
       },
-      { property: "og:title", content: "NovaStack Testimonials — Loved by Founders & Teams" },
+      { property: "og:title", content: "Boolbit Testimonials — Loved by Founders & Teams" },
       {
         property: "og:description",
         content:
-          "See how teams used NovaStack to ship faster, scale smarter and convert more — in their own words.",
+          "See how teams used Boolbit to ship faster, scale smarter and convert more — in their own words.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NovaStack Testimonials" },
+      { name: "twitter:title", content: "Boolbit Testimonials" },
       {
         name: "twitter:description",
-        content: "Real stories from teams that shipped with NovaStack.",
+        content: "Real stories from teams that shipped with Boolbit.",
       },
     ],
     scripts: [
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/testimonials")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          name: "NovaStack Tech Services",
+          name: "Boolbit Tech Services",
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",

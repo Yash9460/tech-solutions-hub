@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import boolbitLogo from "@/assets/boolbit-logo.png";
 
 export function Footer() {
   return (
@@ -7,11 +8,17 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <Link to="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden ring-1 ring-border/60 bg-[#0b1430]">
+              <img
+                src={boolbitLogo}
+                alt="Boolbit logo"
+                className="h-full w-full object-cover scale-[1.6]"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
             <span className="font-display text-lg font-bold">
-              Nova<span className="text-gradient">Stack</span>
+              Bool<span className="text-gradient">bit</span>
             </span>
           </Link>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm">
@@ -45,7 +52,7 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-3">Get in touch</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@novastack.dev</li>
+            <li>hello@boolbit.dev</li>
             <li>+91 90000 00000</li>
             <li>Bengaluru, India</li>
           </ul>
@@ -54,7 +61,7 @@ export function Footer() {
 
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} NovaStack. Crafted with precision.</p>
+          <p>© {new Date().getFullYear()} Boolbit. Crafted with precision.</p>
           <p>Engineered for the next decade of the web.</p>
         </div>
       </div>

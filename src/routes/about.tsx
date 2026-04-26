@@ -6,20 +6,20 @@ import { Layout } from "@/components/site/Layout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About NovaStack — Senior Tech Team Building Modern Products" },
+      { title: "About Boolbit — Senior Tech Team Building Modern Products" },
       {
         name: "description",
         content:
-          "NovaStack is a senior tech studio of 18 designers and engineers shipping web, mobile, AI and cloud products for ambitious brands worldwide since 2019.",
+          "Boolbit is a senior tech studio of 18 designers and engineers shipping web, mobile, AI and cloud products for ambitious brands worldwide since 2019.",
       },
-      { property: "og:title", content: "About NovaStack — Senior Tech Studio" },
+      { property: "og:title", content: "About Boolbit — Senior Tech Studio" },
       {
         property: "og:description",
         content: "Meet the team building the next generation of digital products.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About NovaStack" },
+      { name: "twitter:title", content: "About Boolbit" },
       {
         name: "twitter:description",
         content: "Meet the team building the next generation of digital products.",
@@ -54,7 +54,7 @@ function AboutPage() {
         <div className="absolute inset-0 grid-pattern opacity-30 [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs font-medium">
-            About NovaStack
+            About Boolbit
           </div>
           <h1 className="mt-5 text-5xl sm:text-6xl font-bold font-display">
             A small studio with <br />

@@ -9,20 +9,20 @@ import heroImage from "@/assets/hero-tech.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NovaStack — Tech Services that Scale Your Business" },
+      { title: "Boolbit — Tech Services that Scale Your Business" },
       {
         name: "description",
         content:
-          "NovaStack is a senior tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
+          "Boolbit is a senior tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
       },
-      { property: "og:title", content: "NovaStack — Tech Services that Scale" },
+      { property: "og:title", content: "Boolbit — Tech Services that Scale" },
       {
         property: "og:description",
         content:
           "Web, mobile, AI, cloud and SaaS engineering for ambitious brands. Premium design + production-grade code.",
       },
       { property: "og:image", content: heroImage },
-      { name: "twitter:title", content: "NovaStack — Tech Services that Scale" },
+      { name: "twitter:title", content: "Boolbit — Tech Services that Scale" },
       {
         name: "twitter:description",
         content: "Web, mobile, AI, cloud and SaaS engineering for ambitious brands.",
@@ -36,8 +36,8 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          name: "NovaStack",
-          image: "https://novastack.dev/og.jpg",
+          name: "Boolbit",
+          image: "https://boolbit.dev/og.jpg",
           description:
             "Tech services agency delivering web, mobile, AI and cloud products end-to-end.",
           priceRange: "$$$",
@@ -72,7 +72,7 @@ const testimonials = [
   {
     name: "Aarav Mehta",
     role: "CEO, FinFlow",
-    text: "NovaStack rebuilt our entire platform in 10 weeks. Page loads dropped from 4s to under 800ms and conversions jumped 38%.",
+    text: "Boolbit rebuilt our entire platform in 10 weeks. Page loads dropped from 4s to under 800ms and conversions jumped 38%.",
   },
   {
     name: "Priya Shah",
@@ -199,7 +199,7 @@ function HomePage() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs font-medium">
               <Star className="h-3.5 w-3.5 text-primary" />
-              Why NovaStack
+              Why Boolbit
             </div>
             <h2 className="mt-4 text-4xl sm:text-5xl font-bold font-display">
               Senior talent. <br />
