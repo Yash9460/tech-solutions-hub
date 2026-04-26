@@ -15,14 +15,8 @@ export const services = [
   {
     icon: Code2,
     title: "Web Development",
-    desc: "Lightning-fast websites and web apps built with React, Next.js and modern edge infrastructure.",
-    tags: ["React", "Next.js", "TypeScript"],
-  },
-  {
-    icon: Globe,
-    title: "WordPress, Shopify & Wix",
-    desc: "Conversion-ready storefronts and content sites on WordPress, Shopify and Wix — custom themes, plugins and integrations included.",
-    tags: ["WordPress", "Shopify", "Wix"],
+    desc: "Lightning-fast websites and web apps — from custom React builds to WordPress, Shopify and Wix storefronts.",
+    tags: ["React", "Next.js", "TypeScript", "WordPress", "Shopify", "Wix"],
   },
   {
     icon: Smartphone,
