@@ -161,6 +161,7 @@ function ServicesPage() {
               ))}
             </div>
           </div>
+        </div>
 
           <div className="mt-14 grid sm:grid-cols-3 gap-4">
             {[
