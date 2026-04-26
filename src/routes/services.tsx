@@ -114,6 +114,90 @@ function ServicesPage() {
       </section>
 
       <section className="relative py-24">
+        <div className="absolute inset-0 grid-pattern opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs font-medium">
+                <Headphones className="h-3.5 w-3.5" /> Maintenance & Support
+              </div>
+              <h2 className="mt-5 text-4xl sm:text-5xl font-bold font-display">
+                We don't just build it — <br />
+                <span className="text-gradient">we keep it running.</span>
+              </h2>
+              <p className="mt-5 text-muted-foreground text-lg">
+                Already have a website or app? Our maintenance team takes care of updates, security
+                patches, performance tuning and on-call bug fixes — for products built by us
+                <em> or </em>by anyone else.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button asChild variant="hero" size="lg">
+                  <Link to="/contact">
+                    Start a maintenance plan <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="glass" size="lg">
+                  <Link to="/contact">Get a free site audit</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: Activity, title: "24/7 Monitoring", desc: "Uptime, performance and error tracking with instant alerts." },
+                { icon: RefreshCw, title: "Updates & Patches", desc: "Frameworks, plugins and dependencies kept secure and current." },
+                { icon: ShieldCheck, title: "Security & Backups", desc: "Daily backups, malware scans and hardening for web & mobile." },
+                { icon: Headphones, title: "On-call Engineers", desc: "Real humans on Slack, email or WhatsApp — same-day fixes." },
+              ].map((m) => (
+                <div
+                  key={m.title}
+                  className="rounded-2xl glass-card p-5 hover:-translate-y-1 hover:border-primary/40 transition-smooth"
+                >
+                  <span className="h-10 w-10 rounded-lg bg-gradient-primary grid place-items-center mb-3">
+                    <m.icon className="h-5 w-5 text-primary-foreground" />
+                  </span>
+                  <h3 className="font-semibold">{m.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14 grid sm:grid-cols-3 gap-4">
+            {[
+              { name: "Essential", price: "$299", tagline: "For small sites", points: ["Monthly updates", "Uptime monitoring", "Email support"] },
+              { name: "Growth", price: "$699", tagline: "For active products", points: ["Weekly updates", "Performance tuning", "4h response SLA"] },
+              { name: "Scale", price: "Custom", tagline: "For mission-critical apps", points: ["Dedicated engineer", "1h response SLA", "On-call rotation"] },
+            ].map((p, i) => (
+              <div
+                key={p.name}
+                className={`rounded-2xl glass-card p-6 transition-smooth hover:-translate-y-1 ${i === 1 ? "border-primary/50 ring-1 ring-primary/30" : ""}`}
+              >
+                <div className="flex items-baseline justify-between">
+                  <h3 className="text-lg font-semibold">{p.name}</h3>
+                  {i === 1 && (
+                    <span className="text-[10px] uppercase tracking-wider text-primary font-semibold">Popular</span>
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground">{p.tagline}</p>
+                <p className="mt-4 text-3xl font-bold font-display">
+                  {p.price}
+                  {p.price.startsWith("$") && <span className="text-sm text-muted-foreground font-normal">/mo</span>}
+                </p>
+                <ul className="mt-5 space-y-2 text-sm">
+                  {p.points.map((pt) => (
+                    <li key={pt} className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" /> {pt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-24">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl sm:text-5xl font-bold font-display">
