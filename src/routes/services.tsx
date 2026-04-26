@@ -36,7 +36,6 @@ export const Route = createFileRoute("/services")({
           name: "Boolbit Services",
           itemListElement: [
             "Web Development",
-            "WordPress, Shopify & Wix",
             "Mobile Apps",
             "AI & Automation",
             "Web & App Maintenance",
