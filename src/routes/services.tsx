@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Activity, RefreshCw, ShieldCheck, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
 import { services } from "@/components/site/services-data";
@@ -7,25 +7,25 @@ import { services } from "@/components/site/services-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Web, Mobile, AI & Cloud Engineering | Boolbit" },
+      { title: "Services — Web, Mobile, WordPress, Shopify, AI & Maintenance | Boolbit" },
       {
         name: "description",
         content:
-          "Web development, mobile apps, AI & automation, cloud, SaaS, UI/UX, cybersecurity and analytics — every tech service your business needs, under one roof.",
+          "Web development (React, WordPress, Shopify, Wix), mobile apps, AI & automation, cloud, SaaS, UI/UX, cybersecurity, analytics and ongoing web & app maintenance — all under one roof.",
       },
-      { property: "og:title", content: "Tech Services — Boolbit" },
+      { property: "og:title", content: "Tech Services & Maintenance — Boolbit" },
       {
         property: "og:description",
-        content: "Eight focused tech services built around modern stacks and senior engineering.",
+        content: "Custom builds on React, WordPress, Shopify and Wix — plus 24/7 web and app maintenance.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Boolbit Services" },
       {
         name: "twitter:description",
-        content: "Eight focused tech services built around modern stacks and senior engineering.",
+        content: "Custom builds on React, WordPress, Shopify and Wix — plus 24/7 web and app maintenance.",
       },
-      { name: "keywords", content: "web development, react, mobile apps, AI agents, cloud devops, saas development, ui ux design, cybersecurity, data analytics" },
+      { name: "keywords", content: "web development, react, wordpress development, shopify development, wix website, mobile apps, AI agents, cloud devops, saas development, ui ux design, cybersecurity, data analytics, web maintenance, app maintenance" },
     ],
     scripts: [
       {
@@ -36,8 +36,10 @@ export const Route = createFileRoute("/services")({
           name: "Boolbit Services",
           itemListElement: [
             "Web Development",
+            "WordPress, Shopify & Wix",
             "Mobile Apps",
             "AI & Automation",
+            "Web & App Maintenance",
             "Cloud & DevOps",
             "UI / UX Design",
             "SaaS Platforms",

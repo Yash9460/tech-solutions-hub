@@ -7,6 +7,8 @@ import {
   Palette,
   Database,
   LineChart,
+  Globe,
+  Wrench,
 } from "lucide-react";
 
 export const services = [
@@ -15,6 +17,12 @@ export const services = [
     title: "Web Development",
     desc: "Lightning-fast websites and web apps built with React, Next.js and modern edge infrastructure.",
     tags: ["React", "Next.js", "TypeScript"],
+  },
+  {
+    icon: Globe,
+    title: "WordPress, Shopify & Wix",
+    desc: "Conversion-ready storefronts and content sites on WordPress, Shopify and Wix — custom themes, plugins and integrations included.",
+    tags: ["WordPress", "Shopify", "Wix"],
   },
   {
     icon: Smartphone,
@@ -27,6 +35,12 @@ export const services = [
     title: "AI & Automation",
     desc: "Custom AI agents, chatbots and workflow automations that save your team hours every single week.",
     tags: ["LLMs", "RAG", "Agents"],
+  },
+  {
+    icon: Wrench,
+    title: "Web & App Maintenance",
+    desc: "Keep your web and mobile apps fast, secure and bug-free with proactive monitoring, updates and on-call engineering support.",
+    tags: ["Monitoring", "Updates", "SLA"],
   },
   {
     icon: Cloud,
@@ -59,3 +73,4 @@ export const services = [
     tags: ["BigQuery", "Dashboards"],
   },
 ] as const;
+
