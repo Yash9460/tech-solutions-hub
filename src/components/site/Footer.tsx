@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import boolbitLogo from "@/assets/boolbit-logo.png";
 
 export function Footer() {
   return (
@@ -7,11 +8,17 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <Link to="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden ring-1 ring-border/60 bg-[#0b1430]">
+              <img
+                src={boolbitLogo}
+                alt="Boolbit logo"
+                className="h-full w-full object-cover scale-[1.6]"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
             <span className="font-display text-lg font-bold">
-              Nova<span className="text-gradient">Stack</span>
+              Bool<span className="text-gradient">bit</span>
             </span>
           </Link>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm">
