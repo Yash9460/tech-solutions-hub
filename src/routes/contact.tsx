@@ -9,20 +9,20 @@ import { Layout } from "@/components/site/Layout";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact NovaStack — Start Your Project in 24 Hours" },
+      { title: "Contact Boolbit — Start Your Project in 24 Hours" },
       {
         name: "description",
         content:
           "Tell us about your project. We respond to every enquiry within 24 hours with ideas, timelines and a transparent quote.",
       },
-      { property: "og:title", content: "Contact NovaStack" },
+      { property: "og:title", content: "Contact Boolbit" },
       {
         property: "og:description",
         content: "Get in touch with our tech team. We respond within 24 hours.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact NovaStack" },
+      { name: "twitter:title", content: "Contact Boolbit" },
       {
         name: "twitter:description",
         content: "Get in touch with our tech team. We respond within 24 hours.",
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const channels = [
-  { icon: Mail, label: "Email", value: "hello@novastack.dev" },
+  { icon: Mail, label: "Email", value: "hello@boolbit.dev" },
   { icon: Phone, label: "Phone", value: "+91 90000 00000" },
   { icon: MapPin, label: "Office", value: "Bengaluru, India" },
 ];

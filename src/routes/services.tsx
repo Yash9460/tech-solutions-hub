@@ -7,20 +7,20 @@ import { services } from "@/components/site/services-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Web, Mobile, AI & Cloud Engineering | NovaStack" },
+      { title: "Services — Web, Mobile, AI & Cloud Engineering | Boolbit" },
       {
         name: "description",
         content:
           "Web development, mobile apps, AI & automation, cloud, SaaS, UI/UX, cybersecurity and analytics — every tech service your business needs, under one roof.",
       },
-      { property: "og:title", content: "Tech Services — NovaStack" },
+      { property: "og:title", content: "Tech Services — Boolbit" },
       {
         property: "og:description",
         content: "Eight focused tech services built around modern stacks and senior engineering.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NovaStack Services" },
+      { name: "twitter:title", content: "Boolbit Services" },
       {
         name: "twitter:description",
         content: "Eight focused tech services built around modern stacks and senior engineering.",
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/services")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "NovaStack Services",
+          name: "Boolbit Services",
           itemListElement: [
             "Web Development",
             "Mobile Apps",

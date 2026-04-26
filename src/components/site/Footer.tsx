@@ -45,7 +45,7 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-3">Get in touch</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@novastack.dev</li>
+            <li>hello@boolbit.dev</li>
             <li>+91 90000 00000</li>
             <li>Bengaluru, India</li>
           </ul>
@@ -54,7 +54,7 @@ export function Footer() {
 
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} NovaStack. Crafted with precision.</p>
+          <p>© {new Date().getFullYear()} Boolbit. Crafted with precision.</p>
           <p>Engineered for the next decade of the web.</p>
         </div>
       </div>

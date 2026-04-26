@@ -29,21 +29,21 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NovaStack — Premium Tech Services Agency" },
+      { title: "Boolbit — Premium Tech Services Agency" },
       {
         name: "description",
         content:
-          "NovaStack is a senior tech agency building web, mobile, AI and cloud products that ship faster and scale smarter.",
+          "Boolbit is a senior tech agency building web, mobile, AI and cloud products that ship faster and scale smarter.",
       },
-      { name: "author", content: "NovaStack" },
+      { name: "author", content: "Boolbit" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "theme-color", content: "#0b1020" },
-      { property: "og:site_name", content: "NovaStack" },
+      { property: "og:site_name", content: "Boolbit" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@novastack" },
-      { name: "twitter:creator", content: "@novastack" },
+      { name: "twitter:site", content: "@boolbit" },
+      { name: "twitter:creator", content: "@boolbit" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -61,18 +61,18 @@ export const Route = createRootRoute({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "NovaStack",
-          url: "https://novastack.dev",
+          name: "Boolbit",
+          url: "https://boolbit.dev",
           description:
             "Senior tech agency building web, mobile, AI and cloud products for ambitious brands.",
           sameAs: [
-            "https://twitter.com/novastack",
-            "https://www.linkedin.com/company/novastack",
-            "https://github.com/novastack",
+            "https://twitter.com/boolbit",
+            "https://www.linkedin.com/company/boolbit",
+            "https://github.com/boolbit",
           ],
           contactPoint: {
             "@type": "ContactPoint",
-            email: "hello@novastack.dev",
+            email: "hello@boolbit.dev",
             contactType: "sales",
             areaServed: "Worldwide",
           },
