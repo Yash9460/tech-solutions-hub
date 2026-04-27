@@ -167,7 +167,7 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((s, i) => (
+            {services.slice(0, 4).map((s, i) => (
               <Reveal key={s.title} delay={(i % 4) * 80}>
                 <div className="group relative rounded-2xl glass-card p-6 hover:border-primary/40 hover:-translate-y-1 transition-smooth h-full">
                   <div className="absolute -inset-px rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-20 blur transition-smooth pointer-events-none" />
