@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 const channels = [
-  { icon: Mail, label: "Email", value: "hello@boolbit.dev" },
-  { icon: Phone, label: "Phone", value: "+91 90000 00000" },
-  { icon: MapPin, label: "Office", value: "Bengaluru, India" },
+  { icon: Mail, label: "Email", value: "support@boolbit.in" },
+  { icon: Phone, label: "Phone", value: "+91 73579 78366" },
+  { icon: MapPin, label: "Office", value: "Jaipur, India" },
 ];
 
 function ContactPage() {
@@ -98,7 +98,7 @@ function ContactPage() {
             <div className="rounded-2xl glass-card p-6">
               <h3 className="font-semibold">Office hours</h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Monday – Friday<br />9:00 AM – 7:00 PM IST
+                Monday – Saturday<br />9:00 AM – 7:00 PM IST
               </p>
             </div>
           </div>
