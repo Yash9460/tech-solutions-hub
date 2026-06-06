@@ -52,9 +52,9 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-3">Get in touch</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@boolbit.dev</li>
-            <li>+91 90000 00000</li>
-            <li>Bengaluru, India</li>
+            <li>support@boolbit.in</li>
+            <li>+91 73579 78366</li>
+            <li>Jaipur, India</li>
           </ul>
         </div>
       </div>
