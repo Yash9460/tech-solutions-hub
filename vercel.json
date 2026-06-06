@@ -1,7 +1,14 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
+  "framework": null,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/_build/(.*)",
+      "destination": "/dist/client/_build/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/server"
+    }
   ]
 }
