@@ -4,28 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Boolbit — Senior Tech Team Building Modern Products" },
-      {
-        name: "description",
-        content:
-          "Boolbit is a senior tech studio of 18 designers and engineers shipping web, mobile, AI and cloud products for ambitious brands worldwide since 2019.",
-      },
-      { property: "og:title", content: "About Boolbit — Senior Tech Studio" },
-      {
-        property: "og:description",
-        content: "Meet the team building the next generation of digital products.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About Boolbit" },
-      {
-        name: "twitter:description",
-        content: "Meet the team building the next generation of digital products.",
-      },
-    ],
-  }),
   component: AboutPage,
 });
 

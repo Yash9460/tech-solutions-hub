@@ -6,51 +6,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { testimonials } from "@/components/site/testimonials-data";
 
 export const Route = createFileRoute("/testimonials")({
-  head: () => ({
-    meta: [
-      { title: "Testimonials — What Founders Say About Boolbit" },
-      {
-        name: "description",
-        content:
-          "Real stories from founders, CTOs and product leaders who shipped with Boolbit. 4.9/5 average rating across 45+ engagements.",
-      },
-      { property: "og:title", content: "Boolbit Testimonials — Loved by Founders & Teams" },
-      {
-        property: "og:description",
-        content:
-          "See how teams used Boolbit to ship faster, scale smarter and convert more — in their own words.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Boolbit Testimonials" },
-      {
-        name: "twitter:description",
-        content: "Real stories from teams that shipped with Boolbit.",
-      },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: "Boolbit Tech Services",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: testimonials.length,
-            bestRating: "5",
-          },
-          review: testimonials.map((t) => ({
-            "@type": "Review",
-            reviewRating: { "@type": "Rating", ratingValue: t.rating, bestRating: 5 },
-            author: { "@type": "Person", name: t.name },
-            reviewBody: t.text,
-          })),
-        }),
-      },
-    ],
-  }),
   component: TestimonialsPage,
 });
 
@@ -70,8 +25,7 @@ function TestimonialsPage() {
               <span className="text-gradient">and product teams.</span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              We measure success by what our clients ship — and how loudly they recommend us
-              afterwards.
+              We measure success by what our clients ship — and how loudly they recommend us afterwards.
             </p>
           </Reveal>
         </div>
@@ -95,9 +49,7 @@ function TestimonialsPage() {
                   </div>
                   <div>
                     <div className="font-semibold leading-tight">{t.name}</div>
-                    <div className="text-xs text-muted-foreground mt-0.5">
-                      {t.role}, {t.company}
-                    </div>
+                    <div className="text-xs text-muted-foreground mt-0.5">{t.role}, {t.company}</div>
                   </div>
                 </div>
               </article>
@@ -116,9 +68,7 @@ function TestimonialsPage() {
                   Want to be our next <span className="text-gradient">success story?</span>
                 </h2>
                 <Button asChild variant="hero" size="xl" className="mt-7">
-                  <Link to="/contact">
-                    Start a project <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <Link to="/contact">Start a project <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>

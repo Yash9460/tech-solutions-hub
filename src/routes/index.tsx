@@ -7,50 +7,6 @@ import { services } from "@/components/site/services-data";
 import heroImage from "@/assets/hero-tech.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Boolbit — Tech Services that Scale Your Business" },
-      {
-        name: "description",
-        content:
-          "Boolbit is a senior tech agency building web apps, mobile apps, AI products and cloud platforms. Ship faster, scale smarter.",
-      },
-      { property: "og:title", content: "Boolbit — Tech Services that Scale" },
-      {
-        property: "og:description",
-        content:
-          "Web, mobile, AI, cloud and SaaS engineering for ambitious brands. Premium design + production-grade code.",
-      },
-      { property: "og:image", content: heroImage },
-      { name: "twitter:title", content: "Boolbit — Tech Services that Scale" },
-      {
-        name: "twitter:description",
-        content: "Web, mobile, AI, cloud and SaaS engineering for ambitious brands.",
-      },
-      { name: "twitter:image", content: heroImage },
-      { name: "keywords", content: "tech agency, web development, mobile apps, AI development, cloud, SaaS, UI UX design, devops" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: "Boolbit",
-          image: "https://boolbit.dev/og.jpg",
-          description:
-            "Tech services agency delivering web, mobile, AI and cloud products end-to-end.",
-          priceRange: "$$$",
-          areaServed: "Worldwide",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "45",
-          },
-        }),
-      },
-    ],
-  }),
   component: HomePage,
 });
 
@@ -142,10 +98,8 @@ function HomePage() {
               height={1280}
               loading="eager"
               decoding="async"
-              fetchPriority="high"
               className="relative rounded-2xl glass-card animate-float"
             />
-
           </div>
         </div>
       </section>
@@ -209,7 +163,6 @@ function HomePage() {
               You don't get juniors learning on your dime. Every project is led by engineers and
               designers with 8+ years shipping real products at scale.
             </p>
-
             <ul className="mt-8 space-y-4">
               {[
                 "Fixed-scope sprints with weekly live demos",
@@ -262,9 +215,7 @@ function HomePage() {
             {process.map((p, i) => (
               <Reveal key={p.n} delay={i * 100}>
                 <div className="relative rounded-2xl glass-card p-6 h-full hover:-translate-y-1 transition-smooth">
-                  <div className="text-5xl font-bold font-display text-gradient opacity-80">
-                    {p.n}
-                  </div>
+                  <div className="text-5xl font-bold font-display text-gradient opacity-80">{p.n}</div>
                   <h3 className="mt-3 text-xl font-semibold">{p.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{p.d}</p>
                 </div>
@@ -282,7 +233,6 @@ function HomePage() {
               Loved by <span className="text-gradient">founders & teams.</span>
             </h2>
           </div>
-
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 100}>
@@ -321,14 +271,11 @@ function HomePage() {
                 Ready to build something <span className="text-gradient">extraordinary?</span>
               </h2>
               <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">
-                Tell us about your project. We'll come back within 24 hours with ideas, a timeline
-                and a transparent quote.
+                Tell us about your project. We'll come back within 24 hours with ideas, a timeline and a transparent quote.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Button asChild variant="hero" size="xl">
-                  <Link to="/contact">
-                    Book a free call <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <Link to="/contact">Book a free call <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
                 <Button asChild variant="glass" size="xl">
                   <Link to="/services">See what we do</Link>

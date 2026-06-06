@@ -7,28 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Boolbit — Start Your Project in 24 Hours" },
-      {
-        name: "description",
-        content:
-          "Tell us about your project. We respond to every enquiry within 24 hours with ideas, timelines and a transparent quote.",
-      },
-      { property: "og:title", content: "Contact Boolbit" },
-      {
-        property: "og:description",
-        content: "Get in touch with our tech team. We respond within 24 hours.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact Boolbit" },
-      {
-        name: "twitter:description",
-        content: "Get in touch with our tech team. We respond within 24 hours.",
-      },
-    ],
-  }),
   component: ContactPage,
 });
 
@@ -87,12 +65,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">Email</label>
-                    <Input
-                      required
-                      type="email"
-                      placeholder="jane@company.com"
-                      className="h-11 bg-secondary/40"
-                    />
+                    <Input required type="email" placeholder="jane@company.com" className="h-11 bg-secondary/40" />
                   </div>
                 </div>
                 <div>
@@ -101,12 +74,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <label className="text-sm font-medium mb-2 block">Tell us about your project</label>
-                  <Textarea
-                    required
-                    rows={6}
-                    placeholder="What are you building, and what success looks like..."
-                    className="bg-secondary/40 resize-none"
-                  />
+                  <Textarea required rows={6} placeholder="What are you building, and what success looks like..." className="bg-secondary/40 resize-none" />
                 </div>
                 <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto">
                   Send message <Send className="h-4 w-4" />
@@ -130,9 +98,7 @@ function ContactPage() {
             <div className="rounded-2xl glass-card p-6">
               <h3 className="font-semibold">Office hours</h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Monday – Friday
-                <br />
-                9:00 AM – 7:00 PM IST
+                Monday – Friday<br />9:00 AM – 7:00 PM IST
               </p>
             </div>
           </div>
